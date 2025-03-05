@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { DoctorCard } from '../components/DoctorCard';
-import { BookingModal } from '../components/BookingModal'; // Updated import
+import { BookingModal } from '../components/BookingModal';
+import { BookCallModal } from '../components/BookCallModal';
 import { doctors, specialties } from '../data/doctors';
 import { Doctor, TimeSlot } from '../types';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { Search, SlidersHorizontal, PhoneCall } from 'lucide-react';
 import { toast } from 'sonner';
 import { isAuthenticated } from '../utils/auth';
 
@@ -13,6 +14,7 @@ export function DoctorsPage() {
   const [selectedSpecialty, setSelectedSpecialty] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('');
   const [sortBy, setSortBy] = useState<'rating' | 'experience'>('rating');
+  const [showBookCallModal, setShowBookCallModal] = useState(false);
 
   const languages = Array.from(
     new Set(doctors.flatMap(doctor => doctor.languages))
@@ -64,7 +66,17 @@ export function DoctorsPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Find a Doctor</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Find a Doctor</h1>
+        
+        <button
+          onClick={() => setShowBookCallModal(true)}
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          <PhoneCall className="w-5 h-5" />
+          <span>Book a Call (5 min)</span>
+        </button>
+      </div>
       
       {/* Search and filters */}
       <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -132,6 +144,11 @@ export function DoctorsPage() {
           onClose={() => setSelectedDoctor(null)}
           onBook={handleBooking}
         />
+      )}
+
+      {/* Book Call Modal */}
+      {showBookCallModal && (
+        <BookCallModal onClose={() => setShowBookCallModal(false)} />
       )}
     </div>
   );

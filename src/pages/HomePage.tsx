@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { HeroSection } from '../components/HeroSection';
 import { ValueProposition } from '../components/ValueProposition';
 import { ReviewSection } from '../components/ReviewSection';
@@ -6,7 +6,7 @@ import { FAQSection } from '../components/FAQSection';
 
 export function HomePage() {
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-900">
       <HeroSection />
       <ValueProposition />
       <ReviewSection />
