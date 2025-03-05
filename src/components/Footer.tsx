@@ -106,13 +106,23 @@ export function Footer() {
                 <Mail className="h-6 w-6" />
               </a>
             </div>
+            <div className="mt-4 flex justify-center md:justify-start">
+              <a
+                href="https://forms.gle/1aMsD6CKXMLMJuLn7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 mt-10 rounded-md transition-colors"
+              >
+                Give Feedback
+              </a>
+            </div>
           </div>
         </div>
         
         {/* Copyright and Theme Toggle */}
-        <div className="mt-8 pt-8 border-t border-gray-800 flex items-center justify-between">
+        <div className="mt-8 pt-8 border-t border-gray-800 flex items-center justify-center space-x-10">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Medivars. All rights reserved.
+            © {new Date().getFullYear()} Medivars. All rights reserved.
           </p>
           <ThemeToggle />
         </div>
