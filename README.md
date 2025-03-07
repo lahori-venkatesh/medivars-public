@@ -1,6 +1,6 @@
 # MediVars - Doctors Consultation Web App
 
-![MediVars Banner](public/images/heroimage.png)
+![MediVars Banner](public/images/heroimage1.png)
 
 A modern telemedicine platform connecting patients with healthcare providers through video consultations, instant messaging, and online appointment management.
 
