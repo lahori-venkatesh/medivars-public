@@ -66,16 +66,8 @@ A modern telemedicine platform connecting patients with healthcare providers thr
    ```bash
    npm install
    ```
-3. Create `.env` file with Firebase configuration:
-   ```env
-   VITE_FIREBASE_API_KEY=your-key
-   VITE_FIREBASE_AUTH_DOMAIN=your-domain
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-bucket
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   VITE_FIREBASE_APP_ID=your-app-id
-   ```
-4. Start development server:
+
+3. Start development server:
    ```bash
    npm run dev
    ```
@@ -131,11 +123,10 @@ A modern telemedicine platform connecting patients with healthcare providers thr
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Project Maintainer: [Your Name] - your.email@example.com
+Project Maintainer: [Lahori Venkatesh] - lahorivenkatesh709@gmail.com
 
-Project Link: [https://github.com/your-username/medivars](https://github.com/your-username/medivars)
+Project Link: [(https://medivars.netlify.app/)]
 
 ## Acknowledgments
-- Firebase documentation
 - React community
-- Telemedicine industry pioneers
+
